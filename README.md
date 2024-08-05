@@ -10,19 +10,18 @@ This is a solution to the [Base Apparel coming soon page challenge on Frontend M
 
 ## Overview
 
+### Links
+
+- Solution URL: [Github](https://github.com/Affan840/Mortgage-Repayment-Calculator)
+- Live Site URL: [Live Preview](https://affan840.github.io/Mortgage-Repayment-Calculator/)
+
 ### Screenshot
 
 ## Desktop
 ![](./Final_Desktop.png)
 
 ## Mobile
-![](./Final_Mobile.png)
-
-
-### Links
-
-- Solution URL: [Github](https://github.com/Affan840/Mortgage-Repayment-Calculator)
-- Live Site URL: [Live Preview](https://affan840.github.io/Mortgage-Repayment-Calculator/)
+![](./Final_Mobile1.png)
 
 
 ### Built with
