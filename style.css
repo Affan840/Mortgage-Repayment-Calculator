@@ -1,0 +1,363 @@
+@import url(https://fonts.googleapis.com/css?family=Plus+Jakarta+Sans:200,300,regular,500,600,700,800,200italic,300italic,italic,500italic,600italic,700italic,800italic);
+
+:root {
+  --Lime: hsl(61, 70%, 52%);
+  --Red: hsl(4, 69%, 50%);
+  --White: hsl(0, 0%, 100%);
+  --Slate-100: hsl(202, 86%, 94%);
+  --Slate-300: hsl(203, 41%, 72%);
+  --Slate-500: hsl(200, 26%, 54%);
+  --Slate-700: hsl(200, 24%, 40%);
+  --Slate-900: hsl(202, 55%, 16%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100;
+  width: 100%;
+  font-family: "Plus Jakarta Sans";
+  background-color: var(--Slate-100);
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+main {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 520px;
+  width: 900px;
+  background-color: white;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+button {
+  font-family: "Plus Jakarta Sans";
+  cursor: pointer;
+}
+
+section {
+  width: 50%;
+  padding:30px 38px;
+  height: 100%;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+form .amount div:focus-within,
+form .center .rate div:focus-within,
+form .center .term div:focus-within {
+  background-color: var(--Lime);
+  border: 1px solid var(--Lime);
+}
+
+form .msg {
+    display: none;
+    margin-top: 5px;
+    padding: 0;
+    font-size: 12px;
+    font-weight: 500;
+    color: red;
+}
+
+form div > div > p {
+  padding: 0 10px;
+  font-weight: 700;
+  color: var(--Slate-700);
+}
+
+.red{
+    background-color: var(--Red) !important;
+    border: 1px solid var(--Red) !important;
+    color: white;
+}
+
+
+form header {
+  display: flex;
+  justify-content: space-between;
+}
+
+form header button {
+  color: var(--Slate-500);
+  font-weight: 600;
+  background: transparent;
+  border: none;
+  text-decoration: underline;
+}
+
+form input[type="number"] {
+  height: 40px;
+  width: 100%;
+  border: 1px solid var(--Slate-500);
+  outline: none;
+  padding: 10px;
+  font-family: "Plus Jakarta Sans";
+  font-weight: 700;
+  font-size: 16px;
+  border: none;
+  background-color: white;
+  color: var(--Slate-900);
+}
+
+form label {
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--Slate-700);
+}
+
+form .amount {
+  position: relative;
+  margin-top: 20px;
+}
+
+form .amount div {
+  margin-top: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--Slate-100);
+  border: 1px solid var(--Slate-500);
+  border-radius: 2px;
+}
+
+form .center {
+  display: flex;
+  width: 100%;
+  gap: 10px;
+}
+form .center .term {
+  width: 50%;
+}
+
+form .center .term div {
+  margin-top: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--Slate-100);
+  border: 1px solid var(--Slate-500);
+  border-radius: 2px;
+}
+
+form .center .rate {
+  width: 50%;
+}
+
+form .center .rate div {
+  margin-top: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--Slate-100);
+  border: 1px solid var(--Slate-500);
+  border-radius: 2px;
+}
+
+form .type>div{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+form .type div div{
+  border: 1px solid var(--Slate-500);
+  border-radius: 5px;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  gap: 16px;
+}
+
+form .type div div:focus-within {
+  border: 1px solid var(--Lime);
+  background-color: hsla(61, 70%, 52%, 0.222);
+}
+
+form .type div input[type="radio"] {
+  appearance: none;
+  width: 8px;
+  height: 8px;
+  outline: 2px solid var(--Slate-900);
+  cursor: pointer;
+  outline-offset: 3px;
+  border-radius: 50%;
+}
+
+input[type="radio"]:checked {
+  background-color: var(--Lime);
+}
+
+form .type div div label {
+  color: var(--Slate-900);
+  font-weight: 700;
+}
+
+form > button {
+  margin-top: 20px;
+  font-weight: 700;
+  font-size: 16px;
+  color: var(--Slate-900);
+  background-color: var(--Lime);
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px;
+  border-radius: 30px;
+  width: 300px;
+}
+
+form > button:hover{
+  background-color:  hsla(61, 70%, 52%, 0.671);
+}
+
+.empty,
+.result {
+  background-color: var(--Slate-900);
+  border-bottom-left-radius: 50px;
+}
+
+.empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+.empty h3{
+    margin-top: 10px;
+}
+
+.empty h3,
+.result h3 {
+  font-size: 21px;
+  font-weight: 600;
+}
+
+.empty p,
+.result p {
+  margin-top: 10px;
+  line-height: 1.5;
+  color: var(--Slate-300);
+  opacity: 0.8;
+  font-size: 14px;
+  width: 105%;
+  padding: 0;
+  font-weight: 500;
+}
+.result {
+  display: none;
+  flex-direction: column;
+  padding: 30px 38px;
+  color: white;
+}
+
+.result p {
+  width: 100%;
+}
+
+.result > div:last-of-type {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 32px;
+  padding: 20px 30px;
+  border-top: 3px solid var(--Lime);
+  border-radius: 6px;
+  background-color: hsl(204, 57%, 14%);
+}
+
+.result > div:last-of-type div:first-of-type{
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--Slate-700);
+}
+
+.result > div:last-of-type div h1 {
+  color: var(--Lime);
+  font-size: 52px;
+  font-weight: 700;
+}
+
+.result > div:last-of-type div h2{
+    margin-top: 10px;
+}
+
+
+@media (max-width: 900px) {
+  main{
+    width: 700px;
+    height: 450px;
+  }
+  main section{
+        padding: 20px 28px;
+  }
+
+  form header h2{
+    font-size: 20px;
+  }
+
+  .result > div:last-of-type div h1{
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 720px) {
+  main{
+    flex-direction: column;
+    height: 100vh;
+    min-height: max-content;
+    width: 320px;
+    border-radius: 0;
+  }
+  main section{
+    width: 100%;
+    padding: 18px 20px;
+  }
+  form .center{
+    flex-direction: column;
+  }
+
+  form .center .term {
+    width: 100%;
+  }
+
+  form .center .rate {
+    width: 100%;
+  }
+
+  form > button{
+    width: 280px;
+  }
+  .empty,
+  .result 
+  {
+    border-bottom-left-radius: 0;
+  }
+  .result > div:last-of-type{
+    padding: 10px 15px;
+  }
+}
